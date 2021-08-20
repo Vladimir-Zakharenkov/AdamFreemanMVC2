@@ -40,9 +40,18 @@ namespace PartyInvites.Controllers
 
         #region Change for Hello World
 
-        public string Index()
+        //public string Index()
+        //{
+        //    return "Hello World";
+        //}
+
+        #endregion
+
+        #region Change for View "MyView"
+
+        public ViewResult Index()
         {
-            return "Hello World";
+            return View("MyView");
         }
 
         #endregion
