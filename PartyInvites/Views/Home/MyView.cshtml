@@ -8,63 +8,82 @@
 
 @* View "MyView"
 
-<head>
+    <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-</head>
-<body>
+    </head>
+    <body>
     <div>
-        Hello World (from the view)
+    Hello World (from the view)
     </div>
-</body>
+    </body>
 
 *@
 
 @* Change for ViewBag
 
-<head>
+    <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-</head>
-<body>
+    </head>
+    <body>
     <div>
-        @ViewBag.Greeting World (from the view)
+    @ViewBag.Greeting World (from the view)
     </div>
-</body>
+    </body>
 
 *@
 
-@* Append informatin about party 
+@* Append informatin about party
 
-<head>
+    <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-</head>
-<body>
+    </head>
+    <body>
     <div>
-        @ViewBag.Greeting World (from the view)
-        <p>We're going to have an exciting party.<br />
-        (To do: sell it better. Add pictures or something.</p>
+    @ViewBag.Greeting World (from the view)
+    <p>We're going to have an exciting party.<br />
+    (To do: sell it better. Add pictures or something.</p>
     </div>
-</body>
+    </body>
 
 *@
 
-@* Append link to RsvpForm *@
+@* Append link(asp-action) to RsvpForm
+
+    <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    </head>
+    <body>
+    <div>
+    @ViewBag.Greeting World (from the view)
+    <p>We're going to have an exciting party.<br />
+    (To do: sell it better. Add pictures or something.</p>
+
+    <a asp-action="RsvpForm">RSVP Now</a>
+    </div>
+    </body>
+
+*@
+
+@* Append Bootstarp class *@
+
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
-        @ViewBag.Greeting World (from the view)
-        <p>We're going to have an exciting party.<br />
-        (To do: sell it better. Add pictures or something.</p>
+    <div class="text-center">
+        <h3>We're going to have an exciting party.</h3>
+        <h4>And you are invited</h4>
 
-        <a asp-action="RsvpForm">RSVP Now</a>
+        <a class="btn btn-primary" asp-action="RsvpForm">RSVP Now</a>
+
     </div>
 </body>
-
 
 </html>
 
