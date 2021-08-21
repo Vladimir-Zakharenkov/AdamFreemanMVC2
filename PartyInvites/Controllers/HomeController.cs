@@ -70,6 +70,23 @@ namespace PartyInvites.Controllers
 
         #region Append method RsvpForm()
 
+        //public ViewResult Index()
+        //{
+        //    int hour = DateTime.Now.Hour;
+        //    ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
+        //    return View("MyView");
+        //}
+
+        //public ViewResult RsvpForm()
+        //{
+        //    return View();
+        //}
+
+        #endregion
+
+        #region Append method RsvpForm() [HttpPost]
+
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
@@ -78,12 +95,21 @@ namespace PartyInvites.Controllers
             return View("MyView");
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             return View();
         }
 
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            // Что сделать: сохранить ответ от гостя
+            return View();
+        }
+
         #endregion
+
 
     }
 }
