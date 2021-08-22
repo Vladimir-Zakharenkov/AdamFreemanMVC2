@@ -7,16 +7,48 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+
+@*
+
+    <head>
     <meta name="viewport" content="width=device-width" />
     <title>Thanks></title>
-</head>
-<body>
+    </head>
+    <body>
     <p>
-        <h1>Thank you, @Model.Name</h1>
+    <h1>Thank you, @Model.Name</h1>
 
+    @if (Model.WillAttend == true)
+    {
+    @:It's great that you're coming. The drinks are already in the fridge!
+    }
+    else
+    {
+    @:Sorry to hear that you can't make it, but thanks for letting us know.
+    }
+    </p>
+
+    <p>
+    Click <a asp-action="ListResponses">here</a> to see who is coming.
+    </p>
+    </body>
+
+*@
+
+@* Append Bootstrap *@
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="text-center">
+    <p>
+        <h1>Thank you, @Model.Name!</h1>
         @if (Model.WillAttend == true)
         {
+
+
             @:It's great that you're coming. The drinks are already in the fridge!
         }
         else
@@ -24,9 +56,8 @@
             @:Sorry to hear that you can't make it, but thanks for letting us know.
         }
     </p>
-
-    <p>
-        Click <a asp-action="ListResponses">here</a> to see who is coming.
-    </p>
+    Click
+    <a class="nav-link" asp-action="ListResponses">here</a> to see who is coming.
 </body>
+
 </html>
