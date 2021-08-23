@@ -37,7 +37,7 @@ namespace LanguageFeatures.Models
         public decimal? Price { get; set; }
         public Product Related {  get; set; }
 
-        public static Product[] GetProduct()
+        public static Product[] GetProducts()
         {
             Product kayak = new Product
             {
