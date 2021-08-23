@@ -33,26 +33,51 @@ namespace LanguageFeatures.Models
 
         #region Adding a Property in the Product.cs File
 
-        public string Name { get; set; }
-        public decimal? Price { get; set; }
-        public Product Related {  get; set; }
+        //public string Name { get; set; }
+        //public decimal? Price { get; set; }
+        //public Product Related { get; set; }
 
+        //public static Product[] GetProducts()
+        //{
+        //    Product kayak = new Product
+        //    {
+        //        Name = "Kayak",
+        //        Price = 275M
+        //    };
+
+        //    Product lifejacket = new Product
+        //    {
+        //        Name = "Lifejacket",
+        //        Price = 48.95M
+        //    };
+
+        //    kayak.Related = lifejacket;
+
+        //    return new Product[] { kayak, lifejacket, null };
+        //}
+
+        #endregion
+
+        #region Using Auto-Implemented Property Initializers
+
+        public string Name { get; set; }
+        public string Category { get; set; } = "Watersports";
+        public decimal? Price { get; set; }
+        public Product Related { get; set; }
         public static Product[] GetProducts()
         {
             Product kayak = new Product
             {
                 Name = "Kayak",
+                Category = "Water Craft",
                 Price = 275M
             };
-
             Product lifejacket = new Product
             {
                 Name = "Lifejacket",
                 Price = 48.95M
             };
-
             kayak.Related = lifejacket;
-
             return new Product[] { kayak, lifejacket, null };
         }
 
