@@ -11,11 +11,9 @@ namespace LanguageFeatures.Controllers
     {
         #region Append first controller
 
-
-        //    public ViewResult Index()
-        //    {
-        //        return View(new string[] { "C#", "Language", "Features" });
-        //    }
+        //public ViewResult Index()
+        //{
+        //    return View(new string[] { "C#", "Language", "Features" });
         //}
 
         #endregion
@@ -79,26 +77,46 @@ namespace LanguageFeatures.Controllers
 
         #region Using String Interpolation
 
+        //public ViewResult Index()
+        //{
+        //    List<string> results = new List<string>();
+
+        //    foreach (Product p in Product.GetProducts())
+        //    {
+        //        string name = p?.Name ?? "<No Name>";
+        //        decimal? price = p?.Price ?? 0;
+        //        string relatedName = p?.Related?.Name ?? "<None>";
+
+        //        results.Add($"Name: {name}, Price: {price}, Related: {relatedName}");
+        //    }
+        //    return View(results);
+        //}
+
+        #endregion
+
+        #region Initializing an Object
+
+        //public ViewResult Index()
+        //{
+        //    string[] names = new string[3];
+
+        //    names[0] = "Bob";
+        //    names[1] = "Joe";
+        //    names[2] = "Alice";
+
+        //    return View("Index", names);
+        //}
+
+        #endregion
+
+        #region Using a Collection Initializer
+
         public ViewResult Index()
         {
-            List<string> results = new List<string>();
-
-            foreach (Product p in Product.GetProducts())
-            {
-                string name = p?.Name ?? "<No Name>";
-                decimal? price = p?.Price ?? 0;
-                string relatedName = p?.Related?.Name ?? "<None>";
-
-                results.Add($"Name: {name}, Price: {price}, Related: {relatedName}");
-            }
-            return View(results);
+            return View("Index", new string[] { "Bob", "Joe", "Alice" });
         }
 
         #endregion
+
     }
-
-
-
-
-
 }
