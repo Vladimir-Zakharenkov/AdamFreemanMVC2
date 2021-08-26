@@ -150,6 +150,27 @@ namespace LanguageFeatures.Controllers
 
         #region Performing a check with "is"
 
+        //public ViewResult Index()
+        //{
+        //    object[] data = new object[] { 275M, 29.95M, "apple", "orange", 100, 10 };
+
+        //    decimal total = 0;
+
+        //    for (int i = 0; i < data.Length; i++)
+        //    {
+        //        if (data[i] is decimal d)
+        //        {
+        //            total += d;
+        //        }
+        //    }
+
+        //    return View("Index", new string[] { $"Total: {total:C2}" });
+        //}
+
+        #endregion
+
+        #region Comparison with type
+
         public ViewResult Index()
         {
             object[] data = new object[] { 275M, 29.95M, "apple", "orange", 100, 10 };
@@ -158,15 +179,22 @@ namespace LanguageFeatures.Controllers
 
             for (int i = 0; i < data.Length; i++)
             {
-                if (data[i] is decimal d)
+                switch (data[i])
                 {
-                    total += d;
+                    case decimal decimalValue:
+                        total += decimalValue;
+                        break;
+
+                    case int intValue when intValue > 50:
+                        total += intValue;
+                        break;
                 }
             }
 
             return View("Index", new string[] { $"Total: {total:C2}" });
-
-            #endregion
         }
+
+        #endregion
+
     }
 }
