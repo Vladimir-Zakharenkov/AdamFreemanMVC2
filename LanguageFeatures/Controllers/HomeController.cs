@@ -120,18 +120,34 @@ namespace LanguageFeatures.Controllers
 
         #region Initializing a Dictionary
 
+        //public ViewResult Index()
+        //{
+        //    Dictionary<string, Product> products = new Dictionary<string, Product>
+        //    {
+        //        { "Kayak", new Product { Name = "Kayak", Price = 275M } },
+        //        { "Lifejacket", new Product{ Name = "Lifejacket", Price = 48.95M } }
+        //    };
+
+        //    return View("Index", products.Keys);
+        //}
+
+        #endregion
+
+        #region Using the C# Collection Initializer Syntax
+
         public ViewResult Index()
         {
             Dictionary<string, Product> products = new Dictionary<string, Product>
             {
-                { "Kayak", new Product { Name = "Kayak", Price = 275M } },
-                { "Lifejacket", new Product{ Name = "Lifejacket", Price = 48.95M } }
+                ["Kayak"] = new Product { Name = "Kayak", Price = 275M },
+                ["Lifejacket"] = new Product { Name = "Lifejacket", Price = 48.95M }
             };
 
             return View("Index", products.Keys);
         }
 
         #endregion
+
 
     }
 }
