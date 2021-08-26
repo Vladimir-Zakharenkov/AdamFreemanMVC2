@@ -111,9 +111,24 @@ namespace LanguageFeatures.Controllers
 
         #region Using a Collection Initializer
 
+        //public ViewResult Index()
+        //{
+        //    return View("Index", new string[] { "Bob", "Joe", "Alice" });
+        //}
+
+        #endregion
+
+        #region Initializing a Dictionary
+
         public ViewResult Index()
         {
-            return View("Index", new string[] { "Bob", "Joe", "Alice" });
+            Dictionary<string, Product> products = new Dictionary<string, Product>
+            {
+                { "Kayak", new Product { Name = "Kayak", Price = 275M } },
+                { "Lifejacket", new Product{ Name = "Lifejacket", Price = 48.95M } }
+            };
+
+            return View("Index", products.Keys);
         }
 
         #endregion
