@@ -198,13 +198,37 @@ namespace LanguageFeatures.Controllers
 
         #region Applying an Extension Method
 
+        //public ViewResult Index()
+        //{
+        //    ShoppingCart cart = new ShoppingCart { Products = Product.GetProducts() };
+
+        //    decimal cartTotal = cart.TotalPrices();
+
+        //    return View("Index", new string[] { $"Total: {cartTotal:C2}" });
+        //}
+
+        #endregion
+
+        #region Applying an Extension Method to an Array
+
         public ViewResult Index()
         {
             ShoppingCart cart = new ShoppingCart { Products = Product.GetProducts() };
 
-            decimal cartTotal = cart.TotalPrices();
+            Product[] productArray =
+            {
+                new Product {Name = "Kayak", Price = 275M},
+                new Product {Name = "LifeJacket", Price = 48.95M}
+            };
 
-            return View("Index", new string[] { $"Total: {cartTotal:C2}" });
+            decimal cartTotal = cart.TotalPrices();
+            decimal arrayTotal = productArray.TotalPrices();
+
+            return View("Index", new string[]
+            {
+                $"Cart Total: {cartTotal:C2}",
+                $"Array Total: {arrayTotal:C2}"
+            });
         }
 
         #endregion

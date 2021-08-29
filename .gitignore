@@ -11,6 +11,7 @@
 *.sln.docstates
 
 *.pdf
+*.epub
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
