@@ -7,7 +7,7 @@ namespace Razor.Controllers
     {
         public IActionResult Index()
         {
-            Product myProduct = new()
+            Product myproduct = new()
             {
                 ProductId = 1,
                 Name = "Kayak",
@@ -16,7 +16,7 @@ namespace Razor.Controllers
                 Price = 275M
             };
 
-            return View(myProduct);
+            return View(myproduct);
         }
     }
 }
