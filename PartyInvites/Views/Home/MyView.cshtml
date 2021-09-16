@@ -9,71 +9,79 @@
 @* View "MyView"
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
     </head>
     <body>
-    <div>
-    Hello World (from the view)
-    </div>
+        <div>
+            Hello World (from the view)
+        </div>
     </body>
 
 *@
+
 
 @* Change for ViewBag
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
     </head>
     <body>
-    <div>
-    @ViewBag.Greeting World (from the view)
-    </div>
+        <div>
+            @ViewBag.Greeting World (from the view)
+        </div>
     </body>
 
 *@
+
 
 @* Append information about party
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
     </head>
     <body>
-    <div>
-    @ViewBag.Greeting World (from the view)
-    <p>We're going to have an exciting party.<br />
-    (To do: sell it better. Add pictures or something.</p>
-    </div>
+        <div>
+            @ViewBag.Greeting World (from the view)
+            <p>
+                We're going to have an exciting party.<br />
+                (To do: sell it better. Add pictures or something.
+            </p>
+        </div>
     </body>
 
 *@
+
 
 @* Append link(asp-action) to RsvpForm
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
     </head>
     <body>
-    <div>
-    @ViewBag.Greeting World (from the view)
-    <p>We're going to have an exciting party.<br />
-    (To do: sell it better. Add pictures or something.</p>
+        <div>
+            @ViewBag.Greeting World (from the view)
+            <p>
+                We're going to have an exciting party.<br />
+                (To do: sell it better. Add pictures or something.
+            </p>
 
-    <a asp-action="RsvpForm">RSVP Now</a>
-    </div>
+            <a asp-action="RsvpForm">RSVP Now</a>
+        </div>
     </body>
 
 *@
+
 
 @* Append Bootstrap class *@
 
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap3/dist/css/bootstrap.css" />
 </head>
 <body>
     <div class="text-center">

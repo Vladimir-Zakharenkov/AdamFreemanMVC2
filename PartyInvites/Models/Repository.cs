@@ -4,7 +4,7 @@ namespace PartyInvites.Models
 {
     public static class Repository
     {
-        private static List<GuestResponse> responses = new List<GuestResponse>();
+        private static List<GuestResponse> responses = new();
 
         public static IEnumerable<GuestResponse> Responses
         {

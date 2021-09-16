@@ -1,4 +1,4 @@
-﻿@ //model IEnumerable<PartyInvites.Models.GuestResponse>
+﻿@model IEnumerable<PartyInvites.Models.GuestResponse>
 
 @{
     Layout = null;
@@ -11,30 +11,30 @@
 @*
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Responses</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>Responses</title>
     </head>
     <body>
-    <h2>Here is the list of people attending the party</h2>
-    <table>
-    <thead>
-    <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (PartyInvites.Models.GuestResponse r in Model)
-    {
-    <tr>
-    <td>@r.Name</td>
-    <td>@r.Email</td>
-    <td>@r.Phone</td>
-    </tr>
-    }
-    </tbody>
-    </table>
+        <h2>Here is the list of people attending the party</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (shef_xyz.Models.GuestResponse r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Email</td>
+                        <td>@r.Phone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </body>
 
 *@
@@ -44,7 +44,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Responses</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap3/dist/css/bootstrap.css" />
 </head>
 <body>
     <div class="panel-body">

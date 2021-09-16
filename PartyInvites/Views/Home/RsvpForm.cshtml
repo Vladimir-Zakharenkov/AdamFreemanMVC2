@@ -11,135 +11,136 @@
 @* Append View "RsvpForm"
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>RsvpForm</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>RsvpForm</title>
     </head>
     <body>
-    <div>
-    This is the RssvpForm.cshtml View
-    </div>
+        <div>
+            This is the RssvpForm.cshtml View
+        </div>
     </body>
 
 *@
+
 
 @* Make form in RsvpForm
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>RsvpForm</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>RsvpForm</title>
     </head>
     <body>
-    <form asp-action="RsvpForm" method="post">
-    <p>
-    <label asp-for="Name">Your name:</label>
-    <input asp-for="Name" />
-    </p>
-    <p>
-    <label asp-for="Email">Your email:</label>
-    <input asp-for="Email" />
-    </p>
-    <p>
-    <label asp-for="Phone">Your phone:</label>
-    <input asp-for="Phone" />
-    </p>
-    <p>
-    <label>Will you attend?</label>
-    <select asp-for="WillAttend">
-    <option value="">Choose an option</option>
-    <option value="true">Yes, I'll be there</option>
-    <option value="false">No, I can't come</option>
-    </select>
-    </p>
-    <button type="submit">Submit RSVP</button>
-    </form>
+        <form asp-action="RsvpForm" method="post">
+            <p>
+                <label asp-for="Name">Your name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your email:</label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your phone:</label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I can't come</option>
+                </select>
+            </p>
+            <button type="submit">Submit RSVP</button>
+        </form>
     </body>
 
-    </html>
-
 *@
+
 
 @* Append asp-validation-summary in RsvpForm
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>RsvpForm</title>
+        <meta name="viewport" content="width=device-width" />
+        <title>RsvpForm</title>
     </head>
     <body>
-    <form asp-action="RsvpForm" method="post">
-    <div asp-validation-summary=All></div>
-    <p>
-    <label asp-for="Name">Your name:</label>
-    <input asp-for="Name" />
-    </p>
-    <p>
-    <label asp-for="Email">Your email:</label>
-    <input asp-for="Email" />
-    </p>
-    <p>
-    <label asp-for="Phone">Your phone:</label>
-    <input asp-for="Phone" />
-    </p>
-    <p>
-    <label>Will you attend?</label>
-    <select asp-for="WillAttend">
-    <option value="">Choose an option</option>
-    <option value="true">Yes, I'll be there</option>
-    <option value="false">No, I can't come</option>
-    </select>
-    </p>
-    <button type="submit">Submit RSVP</button>
-    </form>
+        <form asp-action="RsvpForm" method="post">
+            <div asp-validation-summary=All></div>
+            <p>
+                <label asp-for="Name">Your name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your email:</label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your phone:</label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I can't come</option>
+                </select>
+            </p>
+            <button type="submit">Submit RSVP</button>
+        </form>
     </body>
 
     </html>
 
 *@
+
 
 @* Append style.css in RsvpForm
 
     <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>RsvpForm</title>
-    <link rel="stylesheet" href="/css/style.css" />
+        <meta name="viewport" content="width=device-width" />
+        <title>RsvpForm</title>
+        <link rel="stylesheet" href="/css/styles.css" />
     </head>
     <body>
-    <form asp-action="RsvpForm" method="post">
-    <div asp-validation-summary=All></div>
-    <p>
-    <label asp-for="Name">Your name:</label>
-    <input asp-for="Name" />
-    </p>
-    <p>
-    <label asp-for="Email">Your email:</label>
-    <input asp-for="Email" />
-    </p>
-    <p>
-    <label asp-for="Phone">Your phone:</label>
-    <input asp-for="Phone" />
-    </p>
-    <p>
-    <label>Will you attend?</label>
-    <select asp-for="WillAttend">
-    <option value="">Choose an option</option>
-    <option value="true">Yes, I'll be there</option>
-    <option value="false">No, I can't come</option>
-    </select>
-    </p>
-    <button type="submit">Submit RSVP</button>
-    </form>
+        <form asp-action="RsvpForm" method="post">
+            <div asp-validation-summary=All></div>
+            <p>
+                <label asp-for="Name">Your name:</label>
+                <input asp-for="Name" />
+            </p>
+            <p>
+                <label asp-for="Email">Your email:</label>
+                <input asp-for="Email" />
+            </p>
+            <p>
+                <label asp-for="Phone">Your phone:</label>
+                <input asp-for="Phone" />
+            </p>
+            <p>
+                <label>Will you attend?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I can't come</option>
+                </select>
+            </p>
+            <button type="submit">Submit RSVP</button>
+        </form>
     </body>
 
-    </html>
-
 *@
+
 
 @* Append Bootstrap class *@
 
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>RssvpForm</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap3/dist/css/bootstrap.css" />
+
 
 </head>
 <body>
@@ -182,4 +183,3 @@
 </body>
 
 </html>
-

@@ -1,5 +1,7 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LanguageFeatures.Models
 {
@@ -44,7 +46,73 @@ namespace LanguageFeatures.Models
 
     #region Adding Filtering Extension Method
 
-    public static class MyExtensionMethods
+    //public static class MyExtensionMethods
+    //{
+    //    public static decimal TotalPrices(this IEnumerable<Product> products)
+    //    {
+    //        decimal total = 0;
+
+    //        foreach (Product prod in products)
+    //        {
+    //            total += prod?.Price ?? 0;
+    //        }
+    //        return total;
+    //    }
+    //    public static IEnumerable<Product> FilterByPrice(this IEnumerable<Product> productEnum, decimal minimumPrice)
+    //    {
+    //        foreach (Product prod in productEnum)
+    //        {
+    //            if ((prod?.Price ?? 0) >= minimumPrice)
+    //            {
+    //                yield return prod;
+    //            }
+    //        }
+    //    }
+    //}
+
+    #endregion
+
+    #region Adding a FilterByName Method
+
+    //public static class MyExtensionMethods
+    //{
+    //    public static decimal TotalPrices(this IEnumerable<Product> products)
+    //    {
+    //        decimal total = 0;
+    //        foreach (Product prod in products)
+    //        {
+    //            total += prod?.Price ?? 0;
+    //        }
+    //        return total;
+    //    }
+
+    //    public static IEnumerable<Product> FilterByPrice(this IEnumerable<Product> productEnum, decimal minimumPrice)
+    //    {
+    //        foreach (Product prod in productEnum)
+    //        {
+    //            if ((prod?.Price ?? 0) >= minimumPrice)
+    //            {
+    //                yield return prod;
+    //            }
+    //        }
+    //    }
+    //    public static IEnumerable<Product> FilterByName(this IEnumerable<Product> productEnum, char firstLetter)
+    //    {
+    //        foreach (Product prod in productEnum)
+    //        {
+    //            if (prod?.Name?[0] == firstLetter)
+    //            {
+    //                yield return prod;
+    //            }
+    //        }
+    //    }
+    //}
+
+    #endregion
+
+    #region Creating a General Filter Method
+
+    public static class MyExtansionMethod
     {
         public static decimal TotalPrices(this IEnumerable<Product> products)
         {
@@ -56,11 +124,12 @@ namespace LanguageFeatures.Models
             }
             return total;
         }
-        public static IEnumerable<Product> FilterByPrice(this IEnumerable<Product> productEnum, decimal minimumPrice)
+
+        public static IEnumerable<Product> Filter(this IEnumerable<Product> productEnum, Func<Product, bool> selector)
         {
             foreach (Product prod in productEnum)
             {
-                if ((prod?.Price ?? 0) >= minimumPrice)
+                if (selector(prod))
                 {
                     yield return prod;
                 }

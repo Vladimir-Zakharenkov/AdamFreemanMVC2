@@ -21,15 +21,9 @@ namespace LanguageFeatures.Models
     {
         public IEnumerable<Product> Products { get; set; }
 
-        public IEnumerator<Product> GetEnumerator()
-        {
-            return Products.GetEnumerator();
-        }
+        public IEnumerator<Product> GetEnumerator() => Products.GetEnumerator();
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     #endregion

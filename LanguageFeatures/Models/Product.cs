@@ -12,7 +12,7 @@ namespace LanguageFeatures.Models
         //public string Name { get; set; }
         //public decimal? Price { get; set; }
 
-        //public static Product[] GetProduct()
+        //public static Product[] GetProducts()
         //{
         //    Product kayak = new Product
         //    {
@@ -31,7 +31,7 @@ namespace LanguageFeatures.Models
 
         #endregion
 
-        #region Adding a Property in the Product.cs File
+        #region Adding a Property
 
         //public string Name { get; set; }
         //public decimal? Price { get; set; }
@@ -77,7 +77,9 @@ namespace LanguageFeatures.Models
         //        Name = "Lifejacket",
         //        Price = 48.95M
         //    };
+
         //    kayak.Related = lifejacket;
+
         //    return new Product[] { kayak, lifejacket, null };
         //}
 
@@ -114,6 +116,41 @@ namespace LanguageFeatures.Models
 
         #region Assigning a Value to a Read-Only Property
 
+        //public Product(bool stock = true)
+        //{
+        //    InStock = stock;
+        //}
+
+        //public string Name { get; set; }
+        //public string Category { get; set; } = "Watersports";
+        //public decimal? Price { get; set; }
+        //public Product Related { get; set; }
+        //public bool InStock { get; }
+
+        //public static Product[] GetProducts()
+        //{
+        //    Product kayak = new Product
+        //    {
+        //        Name = "Kayak",
+        //        Category = "Water Craft",
+        //        Price = 275M
+        //    };
+
+        //    Product lifejacket = new Product(false)
+        //    {
+        //        Name = "Lifejacket",
+        //        Price = 48.95M
+        //    };
+
+        //    kayak.Related = lifejacket;
+
+        //    return new Product[] { kayak, lifejacket, null };
+        //}
+
+        #endregion
+
+        #region Expressing a Property as a Lambda Expression
+
         public Product(bool stock = true)
         {
             InStock = stock;
@@ -124,6 +161,8 @@ namespace LanguageFeatures.Models
         public decimal? Price { get; set; }
         public Product Related { get; set; }
         public bool InStock { get; }
+
+        public bool NameBeginsWithS => Name?[0] == 'S';
 
         public static Product[] GetProducts()
         {
@@ -143,9 +182,8 @@ namespace LanguageFeatures.Models
             kayak.Related = lifejacket;
 
             return new Product[] { kayak, lifejacket, null };
-
-            #endregion
         }
 
+        #endregion
     }
 }

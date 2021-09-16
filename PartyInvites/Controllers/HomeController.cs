@@ -196,15 +196,9 @@ namespace PartyInvites.Controllers
                 // Обнаружена ошибка проверки достоверности.
                 return View();
             }
-
-
-
         }
 
-        public ViewResult ListResponses()
-        {
-            return View(Repository.Responses.Where(r => r.WillAttend == true));
-        }
+        public ViewResult ListResponses() => View(Repository.Responses.Where(r => r.WillAttend == true));
 
         #endregion
 
