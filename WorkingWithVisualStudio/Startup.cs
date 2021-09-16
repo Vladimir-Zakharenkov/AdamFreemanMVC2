@@ -29,8 +29,10 @@ namespace WorkingWithVisualStudio
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
 
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(endpoints => endpoints.MapControllerRoute(

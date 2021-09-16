@@ -12,21 +12,24 @@
     <title>Working with Visual Studio</title>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <td>Name</td><td>Price</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var p in Model)
-            {
+    <h3>Products</h3>
+    <p>Request Time: @DateTime.Now.ToString("HH:mm:ss")</р>
+        <table>
+            <thead>
                 <tr>
-                    <td>@p.Name</td>
-                    <td>@p.Price</td>
+                    <td>Name</td>
+                    <td>Price</td>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.Name</td>
+                        <td>@($"{p.Price:C2}")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 </body>
 </html>
