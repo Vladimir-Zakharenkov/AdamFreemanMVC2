@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvite
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageFeatures", "LanguageFeatures\LanguageFeatures.csproj", "{239BA6C4-8813-46B7-AD5D-1616F43FFA0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razor", "Razor\Razor.csproj", "{918EE769-A2F7-4351-BDBD-A02DACBC76A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Razor", "Razor\Razor.csproj", "{918EE769-A2F7-4351-BDBD-A02DACBC76A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithVisualStudio", "WorkingWithVisualStudio\WorkingWithVisualStudio.csproj", "{D48FB204-A621-43BA-8443-01E9B528EC4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{918EE769-A2F7-4351-BDBD-A02DACBC76A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{918EE769-A2F7-4351-BDBD-A02DACBC76A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{918EE769-A2F7-4351-BDBD-A02DACBC76A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D48FB204-A621-43BA-8443-01E9B528EC4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48FB204-A621-43BA-8443-01E9B528EC4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48FB204-A621-43BA-8443-01E9B528EC4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48FB204-A621-43BA-8443-01E9B528EC4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
