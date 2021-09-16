@@ -16,7 +16,7 @@ namespace Razor.Controllers
                 Price = 275M
             };
 
-            ViewBag.StockLevel = 2;
+            ViewBag.StockLevel = 5;
 
             return View(myproduct);
         }
