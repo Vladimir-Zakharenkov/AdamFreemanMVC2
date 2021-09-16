@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WorkingWithVisualStudio.Models
 {
     public class SimpleRepository
     {
-        private static SimpleRepository sharedRepository = new();
-
         private Dictionary<string, Product> products = new();
 
-        public static SimpleRepository SharedRepository => sharedRepository;
+        public static SimpleRepository SharedRepository { get; } = new();
 
         public SimpleRepository()
         {
