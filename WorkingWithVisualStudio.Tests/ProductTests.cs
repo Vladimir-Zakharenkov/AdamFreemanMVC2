@@ -28,7 +28,7 @@ namespace WorkingWithVisualStudio.Tests
             p.Price = 200M;
 
             // Утверждение
-            Assert.Equal(100M, p.Price);
+            Assert.Equal(200M, p.Price);
         }
     }
 }
