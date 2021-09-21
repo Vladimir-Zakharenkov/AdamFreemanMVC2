@@ -36,5 +36,39 @@ namespace WorkingWithVisualStudio.Tests
             Assert.Equal(controller.Repository.Products, model, Comparer.Get<Product>((p1, p2) =>
                 p1.Name == p2.Name && p1.Price == p2.Price));
         }
+
+        class PropertyOnceFakeRepository : IRepository
+        {
+            public int PropertyCounter { get; set; } = 0;
+
+            public IEnumerable<Product> Products
+            {
+                get
+                {
+                    PropertyCounter++;
+                    return new[] { new Product { Name = "P1", Price = 100 } };
+                }
+            }
+
+            public void AddProduct(Product p)
+            {
+                // Ничего не делать - для теста не требуется
+            }
+        }
+
+        [Fact]
+        public void RepositoryPropertyCalledOnce()
+        {
+            // Организация
+            var repo = new PropertyOnceFakeRepository();
+            var controller = new HomeController { Repository = repo };
+
+            // Действие
+            var result = controller.Index();
+
+            // Утверждение
+            Assert.Equal(1, repo.PropertyCounter);
+
+        }
     }
 }
