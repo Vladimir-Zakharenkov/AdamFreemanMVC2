@@ -6,9 +6,7 @@ namespace WorkingWithVisualStudio.Controllers
 {
     public class HomeController : Controller
     {
-        // public IActionResult Index() => View(SimpleRepository.SharedRepository.Products.Where(p => p.Price < 50));
-
-        SimpleRepository Repository = SimpleRepository.SharedRepository;
+        public IRepository Repository = SimpleRepository.SharedRepository;
 
         public IActionResult Index() => View(Repository.Products.Where(p => p.Price < 50));
 
