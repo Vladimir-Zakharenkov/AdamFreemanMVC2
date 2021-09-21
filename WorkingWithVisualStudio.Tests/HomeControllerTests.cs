@@ -11,7 +11,7 @@ namespace WorkingWithVisualStudio.Tests
         class ModelCompleteFakeRepository : IRepository
         {
             public IEnumerable<Product> Products { get; set; }
-            
+
             public void AddProduct(Product p)
             {
                 // Ничего не делать - для теста не требуется
@@ -19,23 +19,16 @@ namespace WorkingWithVisualStudio.Tests
         }
 
         [Theory]
-        [InlineData(275, 48.95, 19.50, 24.95)]
-        [InlineData(5, 48.95, 19.50, 24.95)]
-        public void IndexActionIsComplete(decimal price1, decimal price2, decimal price3, decimal price4)
+        [ClassData(typeof(ProductTestData))]
+        public void IndexActionIsComplete(Product[] products)
         {
             // Организация
             var controller = new HomeController();
             controller.Repository = new ModelCompleteFakeRepository
             {
-                Products = new Product[]
-                {
-                    new Product { Name = "P1", Price = price1},
-                    new Product { Name = "P2", Price = price2},
-                    new Product { Name = "P3", Price = price3},
-                    new Product { Name = "P4", Price = price4},
-                }
+                Products = products
             };
-        
+
             // Действие
             var model = (controller.Index() as ViewResult)?.ViewData.Model as IEnumerable<Product>;
 
