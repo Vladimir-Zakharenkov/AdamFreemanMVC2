@@ -9,6 +9,13 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Razor.Tools" Version="1.1.0-preview4-final" />
 		<PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Controllers\" />
+	  <Folder Include="Data\" />
+	  <Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>
