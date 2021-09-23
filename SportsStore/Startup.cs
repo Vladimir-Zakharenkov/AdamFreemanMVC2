@@ -50,6 +50,8 @@ namespace SportsStore
             app.UseEndpoints(endpoints => endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Product}/{action=List}/{id?}"));
+
+            SeedData.EnsurePopulated(app);
         }
     }
 }
