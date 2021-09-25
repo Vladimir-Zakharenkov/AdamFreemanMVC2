@@ -8,8 +8,7 @@ namespace SportsStore.Models
     {
         public static void EnsurePopulated(IApplicationBuilder app)
         {
-            ApplicationDbContext context = 
-                    app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
+            ApplicationDbContext context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
 
             if (!context.Products.Any())
             {
@@ -77,7 +76,9 @@ namespace SportsStore.Models
                     Category = "Chess",
                     Price = 1200
                 }
+
                 );
+
                 context.SaveChanges();
             }
         }
