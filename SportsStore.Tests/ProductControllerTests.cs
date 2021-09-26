@@ -29,10 +29,10 @@ namespace SportsStore.Tests
             controller.PageSize = 3;
 
             // Действие
-            IEnumerable<Product> result = controller.List(2).ViewData.Model as IEnumerable<Product>;
+            ProductListViewModel result = controller.List(2).ViewData.Model as ProductListViewModel;
 
             // Утверждение
-            Product[] prodArray = result.ToArray();
+            Product[] prodArray = result.Products.ToArray();
             Assert.True(prodArray.Length == 2);
             Assert.Equal("P4", prodArray[0].Name);
             Assert.Equal("P5", prodArray[1].Name);
