@@ -29,7 +29,7 @@ namespace SportsStore.Infrastructure
 
             TagBuilder result = new("div");
 
-            for (int i = 0; i < PageModel.TotalPages; i++)
+            for (int i = 1; i <= PageModel.TotalPages; i++)
             {
                 TagBuilder tag = new("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction, new { productPage = i });
