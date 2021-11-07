@@ -49,7 +49,7 @@ namespace SportsStore
                 endpoints.MapControllerRoute(
                     name: "pagination",
                     pattern: "Product/Page{productPage}",
-                    defaults: new { controller = "Product", action = "List", });
+                    defaults: new { controller = "Product", action = "List" });
 
                 endpoints.MapControllerRoute(
                     name: "default",
