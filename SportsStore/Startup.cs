@@ -1,18 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.WebEncoders;
+using SportsStore.Models;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
-using SportsStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore;
 
 namespace SportsStore
 {
@@ -24,12 +19,13 @@ namespace SportsStore
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("SportsStoreContext")));
 
+            // services.AddTransient<IProductRepository, FakeProductRepository>();
             services.AddTransient<IProductRepository, EFProductRepository>();
-
-            services.AddControllersWithViews();
 
             services.Configure<WebEncoderOptions>(options =>
                 options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All));
@@ -48,10 +44,6 @@ namespace SportsStore
             app.UseRouting();
 
 
-            //app.UseEndpoints(endpoints => endpoints.MapControllerRoute(
-            //    name: "default",
-            //    pattern: "{controller=Product}/{action=List}/{id?}"));
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -65,7 +57,7 @@ namespace SportsStore
             }
             );
 
-            SeedData.EnsurePopulated(app);
+            // SeedData.EnsurePopulated(app);
         }
     }
 }
